@@ -30,6 +30,24 @@ amplify init
 ```
 This command creates amplify folder in the project with relevant files. See amplify/team-provider-info.json, it has auto populated data.
 
+6. Add API using the command below, and answering the questions as per public/amplify-add.jpeg screenshot to create a Graphql API.
+
+```
+amplify add api
+```
+This command creates Graphql schema file in the project (see schema.graphql). Notice the @model annotation in the schema, this tells that when this is executed, a table must be created in the dynamodb (different data source can also be configured if need be). Edit this file to define the schema you want (which in our case is Post and Comment; note how we create a one to many relationship between the two using the @connection anotation).
+
+7. Run below command to provision the Appsync api in the backend, and also generate the code which can be used to connect with the Appsync backend. Answer the questions as per screenshot public/amplify-push.jpeg
+```
+amplify push
+```
+Above command will give you the generated Graphql endpoint and API key. It also creates files in the project which will help in connecting and making queries to the backend. See src/graphql/queries.js (has all get queries) and src/graphql/mutation.js (has all create/update queries)
+
+8. Run below command to access the Appsync created in step 7. It will open AWS Appsync console in the browser.
+```
+amplify console api
+```
+
 ## Concepts
 
 **Appsync Architecture:**
