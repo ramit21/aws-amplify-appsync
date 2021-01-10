@@ -40,7 +40,7 @@ class CreatePost extends Component {
               createdAt: new Date().toISOString()
          }
          await API.graphql(graphqlOperation(createPost, { input }))
-         this.setState({ postTitle: "", postBody: ""})
+         this.setState({ postTitle: "", postBody: ""})// to clear the form after insertion
     }
 
     handleChangePost = event => this.setState({
