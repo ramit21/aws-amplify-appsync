@@ -46,7 +46,7 @@ This command creates Graphql schema file in the project (see schema.graphql). No
 ```
 amplify push
 ```
-Above command will give you the generated Graphql endpoint and API key. It also creates files in the project which will help in connecting and making queries to the backend. See src/graphql/queries.js (has all get queries) and src/graphql/mutation.js (has all create/update queries)
+Above command will give you the generated Graphql endpoint and API key. It also creates files in the project which will help in connecting and making queries to the backend. See src/graphql/queries.js (has all get queries), src/graphql/mutation.js (has all create/update queries), subsciption.js (has all subsciptions which can be suscribed for real time updates)
 
 8. Run below command to access the Appsync created in step 7. It will open AWS Appsync console in the browser.
 ```
@@ -75,7 +75,7 @@ npm install aws-amplify aws-amplify-react
 
 11. Now configure Amplify in the project. Note the file src/aws-exports.js which has info on region, appsync endpoint and authentication key. Import this file and Amplify module (from module added in step 10) in index.js to configure the project. 
 
-12. Start writing components that will read/write data from the backend and display on the UI. See src/components/DisplayPosts.js and CreatePosts.js
+12. Start writing components that will read/write data from the backend and display on the UI. See src/components/DisplayPosts.js and CreatePosts.js. Also see how we suscribe for real time updates in DisplayPosts.js, so data is refreshed across apps (open different browsers and notice the behaviour on addition of new comment).
 
 
 ## Concepts
