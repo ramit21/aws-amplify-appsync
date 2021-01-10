@@ -1,10 +1,6 @@
 # aws-amplify-appsync
 AWS Amplify, Appsync, Graphql POC
 
-**Appsync** simplifies the process of developing applications by letting us create flexible, secure, extensible and realtime (ie subscribe-able) Graphql APIs. Appsync also support offline access. At backend, appsync can connect with Dynamodb, RDS, Lambda, ES etc.
-
-**Amplify** is a javascript library/framework for developers to quickly configure, manage and create applications with features for AWS cloud. Amplify has many modules: API, auth, storage, analytics, caching, UI components etc. 
-
 **Project setup**:
 For setting up Amplify CLI integrated react app, follow the steps below. (For running this POC, just follow till step 4)
 1. Install node.
@@ -65,11 +61,17 @@ mutation addPost {
 
 10. Add amplify modules to the project which will provide us classes to interact with graphql related classes generated in step 7.
 ```
-npm install aws-amplofy
+npm install aws-amplify aws-amplify-react
 ```
+
+11. Now configure Amplify in the project. Note the file src/aws-exports.js which has info on region, appsync endpoint and authentication key. Import this file and Amplify module (from module added in step 10) in index.js to configure the project. 
 
 
 ## Concepts
+
+**Appsync** simplifies the process of developing applications by letting us create flexible, secure, extensible and realtime (ie subscribe-able) Graphql APIs. Appsync also support offline access. At backend, appsync can connect with Dynamodb, RDS, Lambda, ES etc.
+
+**Amplify** is a javascript library/framework for developers to quickly configure, manage and create applications with features for AWS cloud. Amplify has many modules: API, auth, storage, analytics, caching, UI components etc. 
 
 **Appsync Architecture:**
 1. **Graphql Proxy**: A component that runs the Graphql engine for processing requests and mapping them to logical functions for data operations or triggers.
