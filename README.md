@@ -24,8 +24,11 @@ npx create-react-app blogapp
 ```
 npm start
 ```
-5. 
-
+5. Setup amplify, which also provisions the backend automatically. Refer public/amplify-init jpeg screenshots on how to answer questions asked when you run below command.
+```
+amplify init
+```
+This command creates amplify folder in the project with relevant files. See amplify/team-provider-info.json, it has auto populated data.
 
 ## Concepts
 
