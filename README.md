@@ -1,6 +1,14 @@
 # aws-amplify-appsync
 AWS Amplify, Appsync, Graphql POC
 
+**Steps to run this POC**
+```
+1. npm install
+2. Install & configure Amplify CLI using step 2 below.
+3. amplify push
+4. npm start
+```
+
 **Project setup**:
 Follow the steps below to create a react app, and use Amplify to provision/connect with AWS Appsync backend.
 
