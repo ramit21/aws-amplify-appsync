@@ -6,6 +6,7 @@ AWS Amplify, Appsync, Graphql POC
 **Amplify** is a javascript library/framework for developers to quickly configure, manage and create applications with features for AWS cloud. Amplify has many modules: API, auth, storage, analytics, caching, UI components etc. 
 
 **Project setup**:
+For setting up Amplify CLI integrated react app, follow the steps below. (For running this POC, just follow till step 4)
 1. Install node.
 2. Install and configure amplify:
 ```
@@ -15,6 +16,16 @@ amplify configure (refer the url below to configure the CLI)
 https://docs.amplify.aws/lib/project-setup/prereq/q/platform/ios#sign-up-for-an-aws-account
 
 ```
+3. Create react app using below command (this poc already has the app, so just run npm install instead)
+```
+npx create-react-app blogapp
+```
+4. Run below command, and the coapplication will open on browser at localhost:3000
+```
+npm start
+```
+5. 
+
 
 ## Concepts
 
