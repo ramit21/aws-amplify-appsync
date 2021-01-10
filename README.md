@@ -75,7 +75,7 @@ npm install aws-amplify aws-amplify-react
 
 11. Now configure Amplify in the project. Note the file src/aws-exports.js which has info on region, appsync endpoint and authentication key. Import this file and Amplify module (from module added in step 10) in index.js to configure the project. 
 
-12. Start writing components that will write/read data from the backend and display on the UI. See src/components/DisplayPosts.js
+12. Start writing components that will read/write data from the backend and display on the UI. See src/components/DisplayPosts.js and CreatePosts.js
 
 
 ## Concepts
