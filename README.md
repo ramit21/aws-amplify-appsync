@@ -2,7 +2,8 @@
 AWS Amplify, Appsync, Graphql POC
 
 **Project setup**:
-For setting up Amplify CLI integrated react app, follow the steps below. (For running this POC, just follow till step 4)
+Follow the steps below to create a react app, and use Amplify to provision/connect with AWS Appsync backend.
+
 1. Install node.
 2. Install and configure amplify:
 ```
@@ -16,7 +17,7 @@ https://docs.amplify.aws/lib/project-setup/prereq/q/platform/ios#sign-up-for-an-
 ```
 npx create-react-app blogapp
 ```
-4. Run below command, and the coapplication will open on browser at localhost:3000
+4. Run below command, and the application will open on browser at localhost:3000
 ```
 npm start
 ```
@@ -65,6 +66,8 @@ npm install aws-amplify aws-amplify-react
 ```
 
 11. Now configure Amplify in the project. Note the file src/aws-exports.js which has info on region, appsync endpoint and authentication key. Import this file and Amplify module (from module added in step 10) in index.js to configure the project. 
+
+12. Start writing components that will write/read data from the backend and display on the UI. See src/components/DisplayPosts.js
 
 
 ## Concepts
