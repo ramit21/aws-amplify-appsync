@@ -47,6 +47,27 @@ Above command will give you the generated Graphql endpoint and API key. It also 
 ```
 amplify console api
 ```
+9. On the AWS Amplify console, run queries like below to create some posts in the DB:
+```
+mutation addPost {
+    createPost(input: {
+        postTitle: "First post"
+        postBody: "Lorem ipsum dolores"
+        postOwnerId: "1619Deadman"
+        postOwnerUsername: "The Undertaker"
+    }) {
+        id
+        postBody
+        postTitle
+    }
+}
+```
+
+10. Add amplify modules to the project which will provide us classes to interact with graphql related classes generated in step 7.
+```
+npm install aws-amplofy
+```
+
 
 ## Concepts
 
