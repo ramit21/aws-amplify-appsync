@@ -73,7 +73,11 @@ mutation addPost {
 npm install aws-amplify aws-amplify-react
 ```
 
-11. Now configure Amplify in the project. Note the file src/aws-exports.js which has info on region, appsync endpoint and authentication key. This is part of .gitignore, and should not be added pushed into repo. See aws-exports-sample.js with masked key id in public folder. Import this file and Amplify module (from module added in step 10) in index.js to configure the project. 
+11. Now configure Amplify in the project.
+
+ Note the file src/aws-exports.js which has info on region, appsync endpoint and authentication key. This is part of .gitignore, and should not be added pushed into repo. See aws-exports-sample.js with masked key id in public folder. In case access key has expired, then generate a new one from Appsync console and update in this file, else you will get 401 error when making call to backend Graphql Api. 
+ 
+ Import this file as well as Amplify module (installed in step 10) in index.js to configure the project. 
 
 12. Start writing components that will read/write data from the backend and display on the UI. See src/components/DisplayPosts.js and CreatePosts.js. Also see how we suscribe for real time updates in DisplayPosts.js, so data is refreshed across apps (open different browsers and notice the behaviour on addition of new comment).
 
