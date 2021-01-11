@@ -82,11 +82,11 @@ npm install aws-amplify aws-amplify-react
 amplify add auth (select username as signin option)
 amplify push
 ```
-Import and wrap app with web-authenticator in app.js. This automatically adds a Cognito login screen to the app. Then import 
+Import and wrap app with web-authenticator in app.js. This automatically adds a Cognito login screen to the app. Then import Auth module and extract logged in user's name and attributes in the application. See CreatePosts.js -> On every post addition, logged in user's credentials are extracted and added as owner of the post.
 
 ## Concepts
 
-**Appsync** simplifies the process of developing applications by letting us create flexible, secure, extensible and realtime (ie subscribe-able) Graphql APIs. Appsync also support offline access. At backend, appsync can connect with Dynamodb, RDS, Lambda, ES etc.
+**Appsync** simplifies the process of developing applications by letting us create flexible, secure, extensible and realtime (ie subscribe-able) Graphql APIs. Appsync also support offline access. Appsync is a preferred way of syncing up data across devices than using congito Sync. At the backend, appsync can connect with Dynamodb, RDS, Lambda, ES etc. 
 
 **Amplify** is a javascript library/framework for developers to quickly configure, manage and create applications with features for AWS cloud. Amplify has many modules: API, auth, storage, analytics, caching, UI components etc. 
 

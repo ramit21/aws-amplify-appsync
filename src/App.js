@@ -12,4 +12,5 @@ function App() {
   );
 }
 
-export default withAuthenticator(App);
+export default withAuthenticator(App,
+{includeGreetings: true}); //show logged in user with logout button for the logged in user.

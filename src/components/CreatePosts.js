@@ -12,8 +12,7 @@ class CreatePost extends Component {
     }
 
     componentDidMount = async () => {
-       //Todo: Auth
-       /*
+       
        await Auth.currentUserInfo()
             .then(user => {
                 this.setState({
@@ -21,12 +20,10 @@ class CreatePost extends Component {
                       postOwnerUsername: user.username
 
                 })
-
-
                 // console.log("Curr: User: ", user.username);
                  //console.log("Attr.Sub: User: ", user.attributes.sub);  
             })
-            */
+            
     }
 
 
