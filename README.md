@@ -73,7 +73,7 @@ mutation addPost {
 npm install aws-amplify aws-amplify-react
 ```
 
-11. Now configure Amplify in the project. Note the file src/aws-exports.js which has info on region, appsync endpoint and authentication key. Import this file and Amplify module (from module added in step 10) in index.js to configure the project. 
+11. Now configure Amplify in the project. Note the file src/aws-exports.js which has info on region, appsync endpoint and authentication key. This is part of .gitignore, and should not be added pushed into repo. See aws-exports-sample.js with masked key id in public folder. Import this file and Amplify module (from module added in step 10) in index.js to configure the project. 
 
 12. Start writing components that will read/write data from the backend and display on the UI. See src/components/DisplayPosts.js and CreatePosts.js. Also see how we suscribe for real time updates in DisplayPosts.js, so data is refreshed across apps (open different browsers and notice the behaviour on addition of new comment).
 
@@ -83,6 +83,13 @@ amplify add auth (select username as signin option)
 amplify push
 ```
 Import and wrap app with web-authenticator in app.js. This automatically adds a Cognito login screen to the app. Then import Auth module and extract logged in user's name and attributes in the application. See CreatePosts.js -> On every post addition, logged in user's credentials are extracted and added as owner of the post.
+
+14. **S3 Publish:** 
+```
+amplify hosting add (will ask for S3 bucket name, index/error pages etc.)
+amplify publish
+```
+Above commands will give you the link with your application hosted on S3.
 
 ## Concepts
 
