@@ -94,6 +94,7 @@ amplify hosting add (will ask for S3 bucket name, index/error pages etc.)
 amplify publish
 ```
 Above commands will give you the link with your application hosted on S3.
+Also go to Cloudformation console, and see the stacks created for all your push/publish commands.
 
 ## Concepts
 
