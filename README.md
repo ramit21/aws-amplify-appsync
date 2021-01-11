@@ -77,6 +77,12 @@ npm install aws-amplify aws-amplify-react
 
 12. Start writing components that will read/write data from the backend and display on the UI. See src/components/DisplayPosts.js and CreatePosts.js. Also see how we suscribe for real time updates in DisplayPosts.js, so data is refreshed across apps (open different browsers and notice the behaviour on addition of new comment).
 
+13. **Authentication:** Add auth module by running below commands. This will provision Cognito user pool in the backend.
+```
+amplify add auth (select username as signin option)
+amplify push
+```
+Import and wrap app with web-authenticator in app.js. This automatically adds a Cognito login screen to the app. Then import 
 
 ## Concepts
 
