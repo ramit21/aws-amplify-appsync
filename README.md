@@ -96,6 +96,8 @@ amplify publish
 Above commands will give you the link with your application hosted on S3.
 Also go to Cloudformation console, and see the stacks created for all your push/publish commands.
 
+Resource cleanup: To bring the backend down, go to CloudFormation console and delete the parent stack.
+
 ## Concepts
 
 **Appsync** simplifies the process of developing applications by letting us create flexible, secure, extensible and realtime (ie subscribe-able) Graphql APIs. Appsync also support offline access. Appsync is a preferred way of syncing up data across devices than using congito Sync. At the backend, appsync can connect with Dynamodb, RDS, Lambda, ES etc. 
